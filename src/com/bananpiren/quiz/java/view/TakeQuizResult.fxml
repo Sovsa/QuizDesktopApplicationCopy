@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="597.0" prefWidth="648.0" styleClass="defaultViewStyle" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bananpiren.quiz.java.controller.TakeQuizResultController">
+   <top>
+      <Pane prefHeight="61.0" prefWidth="648.0" BorderPane.alignment="CENTER">
+         <children>
+            <Separator layoutY="58.0" prefHeight="0.0" prefWidth="648.0" />
+            <Text fx:id="headerTextLabel" layoutX="18.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Provet genomfört!" textAlignment="CENTER" wrappingWidth="611.341796875">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <Pane prefHeight="55.0" prefWidth="648.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text fx:id="correctQuizAnswerText" layoutX="141.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Du har genomfört ett prov som inte är självrättande och därför ser du inget resultat." textAlignment="CENTER" wrappingWidth="365.13671875">
+               <font>
+                  <Font size="18.0" />
+               </font></Text>
+            <Text fx:id="quizNameText" layoutX="18.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Titel på quiz" textAlignment="CENTER" wrappingWidth="611.341796875">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane fx:id="scrollPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.9" prefHeight="750.0" prefWidth="660.0" styleClass="defaultViewStyle" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bananpiren.quiz.java.controller.CreateQuizController">
+   <content>
+      <BorderPane maxWidth="-Infinity" prefWidth="648.0">
+         <center>
+            <VBox prefWidth="648.0" spacing="10.0" BorderPane.alignment="TOP_LEFT">
+               <children>
+                  <Separator prefWidth="200.0" />
+                  <Label text="Quiz namn">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="textFieldQuizName" promptText="Skriv in namn på quiz här" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="40.0" spacing="10.0">
+                     <children>
+                        <CheckBox fx:id="timeLimitCheckBox" mnemonicParsing="false" text="Tidsbegränsning" />
+                        <CheckBox fx:id="selfCorrectingCheckBox" mnemonicParsing="false" text="Självrättande" />
+                        <CheckBox fx:id="showResultsIfSelfCorrectedCheckBox" disable="true" mnemonicParsing="false" text="Självrättande - Visa inte resultat direkt efter test" />
+                     </children>
+                  </HBox>
+                  <GridPane fx:id="timeLimitGridPane" maxHeight="0.0" minHeight="0.0" prefHeight="0.0" visible="false">
+                     <children>
+                        <Label text="Välj tidsgräns">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <Slider fx:id="sliderTime" showTickLabels="true" showTickMarks="true" GridPane.rowIndex="1" />
+                        <Label fx:id="labelMinutes" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label text="Vald tid:" GridPane.columnIndex="1">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <GridPane>
+                     <children>
+                        <Label text="Välj slutdatum" GridPane.columnIndex="1">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="datePickerEndDate" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Välj startdatum">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="datePickerStartDate" GridPane.rowIndex="1" />
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <Separator prefWidth="200.0" />
+                  <VBox fx:id="vboxAddQuestions" />
+                  <HBox id="createQuizQuestionsButtons" alignment="TOP_CENTER" prefHeight="30.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="buttonAddMultipleAnswerQuestion" mnemonicParsing="false" prefWidth="150.0" text="Lägg till Multisvars Fråga" />
+                        <Button fx:id="buttonAddSingleAnswerQuestion" mnemonicParsing="false" prefWidth="150.0" text="Lägg till singelsvars fråga" />
+                        <Button fx:id="buttonAddOpenAnswerQuestion" mnemonicParsing="false" prefWidth="150.0" text="Lägg till öppen fråga" />
+                        <Button fx:id="buttonRemoveCurrentQuestion" layoutX="409.0" layoutY="10.0" mnemonicParsing="false" prefWidth="150.0" text="Ta bort vald fråga" />
+                     </children>
+                  </HBox>
+                  <HBox id="createQuizCreateButton" alignment="CENTER" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Button fx:id="buttonCreateQuiz" alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="150.0" text="Skapa Quiz" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </VBox>
+         </center>
+         <top>
+            <Label styleClass="create-editQuizLabel" text="Skapa Quiz" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+         </top>
+      </BorderPane>
+   </content>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</ScrollPane>

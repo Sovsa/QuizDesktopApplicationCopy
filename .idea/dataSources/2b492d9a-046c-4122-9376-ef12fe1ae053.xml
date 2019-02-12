@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="bananpiren@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.1">
+    <root id="1"/>
+    <schema id="2" parent="1" name="bananpiren">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="accounts"/>
+    <schema id="4" parent="1" name="bosses"/>
+    <schema id="5" parent="1" name="gamers"/>
+    <schema id="6" parent="1" name="heroes"/>
+    <schema id="7" parent="1" name="highscore"/>
+    <schema id="8" parent="1" name="information_schema"/>
+    <schema id="9" parent="1" name="jpadb"/>
+    <schema id="10" parent="1" name="library"/>
+    <schema id="11" parent="1" name="mysql"/>
+    <schema id="12" parent="1" name="performance_schema"/>
+    <schema id="13" parent="1" name="person"/>
+    <schema id="14" parent="1" name="quizdb"/>
+    <schema id="15" parent="1" name="sys"/>
+    <schema id="16" parent="1" name="test1"/>
+    <schema id="17" parent="1" name="tododb"/>
+    <schema id="18" parent="1" name="users"/>
+  </database-model>
+</dataSource>

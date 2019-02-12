@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="670.0" styleClass="defaultViewStyle" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bananpiren.quiz.java.controller.ResultsController">
+   <top>
+      <Label text="Dina resultat" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="resultsTable" layoutX="29.0" layoutY="47.0" prefHeight="200.0" prefWidth="596.0">
+              <columns>
+                <TableColumn fx:id="quizNameColumn" prefWidth="321.0" text="Quiz" />
+                <TableColumn fx:id="correctAnswersColumn" prefWidth="93.0" text="Antal Rätt" />
+                  <TableColumn fx:id="numberOfQuestionsColumn" prefWidth="84.0" text="Antal Frågor" />
+                  <TableColumn fx:id="resultColumn" minWidth="9.666656494140625" prefWidth="38.333343505859375" text="\%" />
+                  <TableColumn fx:id="gradeColumn" prefWidth="59.333343505859375" text="Betyg" />
+              </columns>
+            </TableView>
+            <PieChart fx:id="resultPieChart" layoutX="11.0" layoutY="222.0" prefHeight="466.0" prefWidth="646.0" />
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

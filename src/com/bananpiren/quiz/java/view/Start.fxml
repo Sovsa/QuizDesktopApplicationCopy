@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.9" prefHeight="750.0" prefWidth="670.0" styleClass="defaultViewStyle" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bananpiren.quiz.java.controller.StartController">
+   <top>
+      <Label text="Start" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="quizTableView" prefHeight="646.0" prefWidth="655.0">
+              <columns>
+                <TableColumn fx:id="quizNameColumn" prefWidth="298.0" text="Quiz Name" />
+                  <TableColumn fx:id="quizStartDateColumn" prefWidth="114.0" text="Quiz Start Date" />
+                  <TableColumn fx:id="quizEndDateColumn" prefWidth="152.0" text="Quiz End Date" />
+              </columns>
+            </TableView>
+            <Button fx:id="takeQuizButton" layoutX="280.0" layoutY="656.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" text="Ta Quiz" />
+         </children>
+      </Pane>
+   </center>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</BorderPane>

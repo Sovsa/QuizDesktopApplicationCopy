@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="670.0" styleClass="defaultViewStyle" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bananpiren.quiz.java.controller.SocketClientController">
+   <bottom>
+      <VBox maxHeight="26.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="textFieldInput" promptText="enter text..." />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </VBox>
+   </bottom>
+   <center>
+      <GridPane hgap="5.0" vgap="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Console" />
+            <Label fx:id="labelConnectedUsers" text="Connected Users" GridPane.columnIndex="1" />
+            <TextArea fx:id="textAreaConsole" prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </TextArea>
+            <TextArea fx:id="textAreaConnectedUsers" prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="527.0" minWidth="10.0" prefWidth="503.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="345.0" minWidth="10.0" prefWidth="197.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="124.0" minHeight="-Infinity" prefHeight="28.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="597.0" minHeight="10.0" prefHeight="597.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </center>
+   <top>
+      <GridPane hgap="5.0" vgap="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="textFieldHostAdress" promptText="enter adress" text="127.0.0.1" GridPane.columnIndex="1" />
+            <TextField fx:id="textFieldUserName" promptText="enter username" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Host adress:" />
+            <Label text="Username" GridPane.rowIndex="1" />
+            <Label text="Logged in as:" GridPane.columnIndex="3" />
+            <Label fx:id="labelCurrentUser" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.columnIndex="2">
+               <children>
+                  <Button fx:id="buttonConnect" mnemonicParsing="false" text="Connect" />
+                  <Button fx:id="buttonDisconnect" disable="true" mnemonicParsing="false" text="Disconnect" />
+               </children>
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </HBox>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="164.0" minWidth="10.0" prefWidth="79.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="285.0" minWidth="10.0" prefWidth="146.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="280.0" minWidth="10.0" prefWidth="250.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="278.0" minWidth="10.0" prefWidth="180.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </top>
+</BorderPane>

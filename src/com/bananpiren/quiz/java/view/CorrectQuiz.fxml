@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bananpiren.quiz.java.controller.CorrectQuizController">
+   <center>
+      <Pane prefHeight="235.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="correctQuizTableView" prefHeight="234.0" prefWidth="600.0">
+              <columns>
+                <TableColumn fx:id="quizNameColumn" prefWidth="298.0" text="Quiznamn" />
+                <TableColumn fx:id="userNameColumn" minWidth="0.0" prefWidth="301.0" text="Användare" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+   </center>
+   <bottom>
+      <Pane prefHeight="110.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="correctQuizButton" layoutX="278.0" layoutY="43.0" mnemonicParsing="false" text="Rätta" />
+         </children>
+      </Pane>
+   </bottom>
+   <top>
+      <Pane prefHeight="54.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="quizName" alignment="CENTER" contentDisplay="BOTTOM" layoutY="5.0" prefHeight="17.0" prefWidth="600.0" text="">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </top>
+</BorderPane>

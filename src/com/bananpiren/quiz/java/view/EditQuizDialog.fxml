@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bananpiren.quiz.java.controller.EditQuizDialogController">
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="60.0" prefWidth="200.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="saveButton" mnemonicParsing="false" prefWidth="65.0" text="Spara" />
+            <Button fx:id="cancelButton" mnemonicParsing="false" prefWidth="65.0" text="Avbryt" />
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <GridPane styleClass="defaultDialogViewStyle" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Quiz Namn" />
+            <TextField fx:id="quizNameTextField" GridPane.columnIndex="1" />
+            <Label layoutX="10.0" layoutY="64.0" text="Start Datum" GridPane.rowIndex="1" />
+            <Label layoutX="10.0" layoutY="188.0" text="Slut Datum" GridPane.rowIndex="2" />
+            <DatePicker fx:id="startDateDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <DatePicker fx:id="endDateDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label layoutX="10.0" layoutY="209.0" text="Tidsbegränsning" GridPane.rowIndex="4" />
+            <Label layoutX="10.0" layoutY="136.0" text="Välj fråga:" GridPane.rowIndex="5" />
+            <CheckBox fx:id="selfCorrectingCheckBox" mnemonicParsing="false" text="Självrättande" GridPane.rowIndex="3" />
+            <TextField fx:id="timeLimitTextField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TableView fx:id="questionsTable" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="6" GridPane.rowSpan="2">
+              <columns>
+                <TableColumn fx:id="questionColumn" prefWidth="509.0" text="Fråga" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="25.0" styleClass="editQuizDialog" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+               <children>
+                  <Button fx:id="deleteQuestionButton" disable="true" layoutX="10.0" layoutY="17.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="Ta bort markerad fråga" />
+                  <Button fx:id="editQuestionButton" disable="true" mnemonicParsing="false" prefHeight="27.0" prefWidth="122.0" text="Redigera markerad fråga" />
+               </children>
+               <GridPane.margin>
+                  <Insets left="80.0" />
+               </GridPane.margin>
+            </HBox>
+            <CheckBox fx:id="showSelfCorrectingCheckBox" disable="true" mnemonicParsing="false" text="Självrättande - Visa inte resultat direkt efter test" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="258.0" minWidth="10.0" prefWidth="155.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="415.0" minWidth="10.0" prefWidth="415.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="145.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="224.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="253.0" minHeight="10.0" prefHeight="250.0" vgrow="SOMETIMES" />
+            <RowConstraints />
+         </rowConstraints>
+         <BorderPane.margin>
+            <Insets left="10.0" right="10.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </center>
+   <top>
+      <Label styleClass="headerLabel" text="Redigera Quiz" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+   </top>
+</BorderPane>
